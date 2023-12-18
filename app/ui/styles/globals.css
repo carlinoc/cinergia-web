@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   BASE STYLES
+   ================================ */
+
+@layer base {
+  /* Set the background color for the entire body */
+  body {
+    @apply bg-bgPrimaryDark text-textColor-50;
+  }
+
+  /* Focus-visible styles for better accessibility */
+  *:focus-visible {
+    border-radius: 0.375rem;
+    outline: 2px solid #3b82f6;
+  }
+
+  /* Scrollbar styles for webkit browsers */
+  *::-webkit-scrollbar {
+    inline-size: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    background-color: #374151;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #3b82f6;
+  }
+
+  /* Custom scrollbar styles for elements with the class 'scroll-card--light' */
+  .scroll-card--light::-webkit-scrollbar {
+    inline-size: 4px;
+  }
+  .scroll-card--light::-webkit-scrollbar-track {
+    background-color: #d4d4d8;
+  }
+  .scroll-card--light::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #3b82f6;
+  }
+}
+
+/* ================================
+     UTILITY CLASSES
+     ================================ */
+
+@layer utilities {
+  /* Custom utility class for focus styles */
+  .focus {
+    @apply focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500;
+  }
+}
+
+/* ================================
+     COMPONENT STYLES
+     ================================ */
+
+@layer components {
+  /* Heading styles */
+  .heading-1 {
+    @apply text-5xl tracking-tight sm:text-6xl md:text-7xl xl:text-8xl;
+  }
+  .heading-2 {
+    @apply text-4xl tracking-tight sm:text-5xl;
+  }
+  .heading-3 {
+    @apply text-3xl tracking-tight sm:text-4xl;
+  }
+  .heading-4 {
+    @apply text-2xl tracking-tight sm:text-3xl;
+  }
+  .heading-5 {
+    @apply text-xl tracking-tight sm:text-2xl;
+  }
+  .heading-6 {
+    @apply text-lg tracking-tight sm:text-xl;
+  }
+
+  /* Paragraph styles */
+  .paragraph-xl {
+    @apply text-xl tracking-tight;
+  }
+  .paragraph-lg {
+    @apply text-lg tracking-tight;
+  }
+  .paragraph-base {
+    @apply text-base tracking-tight;
+  }
+  .paragraph-sm {
+    @apply text-sm tracking-tight;
+  }
+  .paragraph-xs {
+    @apply text-xs tracking-tight;
+  }
+
+  /* Span styles */
+  .span-xl {
+    @apply text-xl tracking-tight;
+  }
+  .span-lg {
+    @apply text-lg tracking-tight;
+  }
+  .span-base {
+    @apply text-base tracking-tight;
+  }
+  .span-sm {
+    @apply text-sm tracking-tight;
+  }
+  .span-xs {
+    @apply text-xs tracking-tight;
+  }
+
+  /* Button styles */
+  .button {
+    @apply inline-flex items-center justify-center gap-2 rounded-md text-base font-medium;
+  }
+  .padding-button {
+    @apply py-2 px-6;
+  }
+  .padding-icon {
+    @apply p-2;
+  }
+  .button-primary {
+    @apply button text-textColor-50 bg-primary-600 hover:bg-primary-700 transition-colors focus;
+  }
+  .button-secondary {
+    @apply button text-textColor-50 bg-secondary-600 hover:bg-secondary-700 transition-colors focus;
+  }
+  .button-tertiary {
+    @apply button text-primary-950 font-medium bg-primary-50 hover:bg-primary-100 transition-colors focus;
+  }
+  .button-outlined {
+    @apply button ring-1 ring-inset text-dark-100 bg-dark-900/30 ring-white/10 hover:bg-white/5 hover:text-white transition-colors focus;
+  }
+  .button-text {
+    @apply button transition-colors focus text-dark-300 hover:text-dark-50 hover:bg-white/5;
+  }
+
+  /* Navbar item styles */
+  .navbar-item {
+    @apply w-full xl:w-fit font-normal text-textColor-300/70 transition-all duration-200 focus:outline-none hover:text-textColor-300 focus:ring-1 focus:ring-dark-900 focus:ring-offset-2;
+  }
+  .navbar-item-sm {
+    @apply navbar-item text-base;
+  }
+  .navbar-item-xl {
+    @apply navbar-item text-base;
+  }
+}
