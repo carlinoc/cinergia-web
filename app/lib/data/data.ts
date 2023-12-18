@@ -1,6 +1,5 @@
 export async function fetchTrending() {
-  const apiUrl =
-    'https://api.themoviedb.org/3/trending/movie/day?language=es-CO';
+  const apiUrl = 'https://api.themoviedb.org/3/trending/movie/day?language=es-CO';
 
   const options = {
     next: { revalidate: 86400 },
@@ -29,8 +28,7 @@ export async function fetchTrending() {
 }
 
 export async function fetchMovieNowPlaying() {
-  const apiUrl =
-    'https://api.themoviedb.org/3/movie/now_playing?language=es-CO-US&page=1';
+  const apiUrl = 'https://api.themoviedb.org/3/movie/now_playing?language=es-CO-US&page=1';
 
   const options = {
     next: { revalidate: 86400 },
